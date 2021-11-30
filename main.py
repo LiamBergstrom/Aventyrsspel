@@ -25,7 +25,7 @@ class Items ():
     def __str__(self):
         return (self.name + " " + self.desc)
 
-dunder_yxa = Items("Yxa","(+7 attack)")
+dunder_yxa = Items("Yxa",7 )
 svärd = Items("Svärd", "(+5 attack)")
 trevlig_läskeblask = Items("potion", " +3 {hp}")
 pilbåge = Items("Pilbåge", "+4 attack")
