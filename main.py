@@ -102,17 +102,7 @@ def main():
                 rand.choice(lista_med_monster)
                 print("Du tog {dmg} skada men fortsätter vidare...")
             else:
-                print("Atans du gick in i en fälla")
-        
- 
-                
-
-                
-
-
-   
-        
- 
+                print("Atans du gick in i en fälla")        
 
 main()
 
