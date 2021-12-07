@@ -117,5 +117,10 @@ def main():
             else:
                 print("Atans du gick in i en fälla")
 
+
+def duel(combatant_1, combatant_2):
+    if combatant_1.strength>combatant_2:
+        print(f"{combatant_1.name}")               
+
 main()
 
