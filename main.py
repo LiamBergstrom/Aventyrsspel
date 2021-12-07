@@ -1,78 +1,10 @@
 import random as rand
-
-class Hero:
-    def __init__(self, name, hp, max_hp, strength, lvl, inventory):
-        self.name = name
-        self.hp = hp
-        self.maxhp = max_hp
-        self.strength = strength
-        self.lvl = lvl
-        self.inventory = inventory
-    
-    def __str__(self):
-        return """
-        -------------
-        Name: {}
-        Hp: {}
-        Damage: {}
-        -------------""".format(self.name, self.hp, self.strength)
-
-class Items ():
-    def __init__(self,name,atk):
-        self.name = name
-        self.atk = atk
-        
-    def __str__(self):
-        return (self.name + " med " + str(self.atk) + " attack")
-
-dunder_yxa = Items("Yxa",7 )
-svärd = Items("Svärd", 5)
-pilbåge = Items("Pilbåge", 4)
-pokeball = Items("pokeball", 3)
-gucci_belt_with_ultimate_whip_power = Items("gucci-belt", 2)
-
-lista_med_items = [dunder_yxa, svärd, pilbåge, pokeball, gucci_belt_with_ultimate_whip_power]
-
-class Potions ():
-    def __init__(self,name,hp):
-        self.name = name
-        self.hp = hp
-
-    def __str__(self):
-        return (self.name + " med " + str(self.hp) + " hp")
-
-        
-trevlig_läskeblask = Potions("potion", 2)
-cedevita = Potions("cedevita",3)
-sicko_pot = Potions("sicko_pot", 5)
-
-class Monster ():
-    def __init__(self, name, desc, hp):
-            self.name = name
-            self.desc = desc
-            self.hp = hp
-    
-    def __str__(self):
-        return (self.name + " med " + str(self.desc) + " attack och " + str(self.hp) + " hp")
-
-läskigt_monster = Monster("läskigt_monster", 5, 3)
-strongman = Monster("strongman", 10, 2)
-snubbesomgårtibble = Monster("tibblesnubbe", 4, 1)
-
-lista_med_monster = [läskigt_monster, strongman,snubbesomgårtibble]
-
-class traps():
-    def __init__(self, name, desc, dmg):
-        self.name = name
-        self.desc = desc
-        self.dmg = dmg
-    
-    def __str__(self):
-        return (self.name + " " + self.desc + " " + self.dmg)
-
-sätt_dig_ner = ("Ett mörkt rum med en stol öppnas, Du funderar och klurar men blir tillslut så trött att du måste sätta dig ner och vila, BAAM! Golvet faller in och du faller till din död i en stor bunt med spikar", 100)
-fontänen = ("Du möts av en fontän, fontänen ser väldigt lovande ut så du tar ett dopp, Plask du blir nerdragen och nästan drunkar men du klarar dig", 4)
-snygg_gäri = ("Du stöter på en snygg gäri. Du säger en dålig pick-up line och på grund av det tar hon fram en Glock 18 och skjuter dig i benet.", 6)
+from Duel import *
+from Hero import *
+from Monster import *
+from Potions import *
+from Items import *
+from Traps import *
 
 def main():
     hero_is_alive = True
@@ -117,10 +49,4 @@ def main():
             else:
                 print("Atans du gick in i en fälla")
 
-
-def duel(combatant_1, combatant_2):
-    if combatant_1.strength>combatant_2:
-        print(f"{combatant_1.name}")               
-
 main()
-
