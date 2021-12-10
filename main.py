@@ -6,9 +6,10 @@ from Potions import *
 from Items import *
 from Traps import *
 
+
 def main():
     hero_is_alive = True
-    hero = Hero("Jonas", 100, 100, rand.randint(1,10),1, [] )
+    hero = Hero("Jonas", 100, 100, rand.randint(1, 10), 1, [])
     print(hero)
     print("Inventory = ", hero.inventory)
 
@@ -22,24 +23,25 @@ def main():
 
         elif val == "s":
             print(hero)
- 
-        elif val == "u":
-            val = input("Vilken dörr vill du väljas? vänster [v], höger [h], eller rakt fram [f]")
 
-        if val == "h" or val == "v" or val == "f" :
+        elif val == "u":
+            val = input(
+                "Vilken dörr vill du väljas? vänster [v], höger [h], eller rakt fram [f]")
+
+        if val == "h" or val == "v" or val == "f":
             slumptal = rand.randint(1, 3)
             if slumptal == 1:
                 print("Du fann en kista")
                 val = input(
-            "Vill du öppna kistan? [ja] [nej]")
+                    "Vill du öppna kistan? [ja] [nej]")
                 if val == "ja":
                     hero.inventory.append(rand.choice(lista_med_items))
                     print("Du hittade en", hero.inventory[0])
                 elif val == "nej":
                     print("Du fortsätter vidare som en idiot utan items")
 
-                    #man skulle kunna skriva att en kista är rotten eller lyser guld
-            
+                    # man skulle kunna skriva att en kista är rotten eller lyser guld
+
             elif slumptal == 2:
                 print("Du måste möta ett monster, monstret är: ")
                 print(rand.choice(lista_med_monster))
@@ -48,5 +50,7 @@ def main():
                 #print("Du tog {dmg} skada men fortsätter vidare...")
             else:
                 print("Atans du gick in i en fälla")
+                print(rand.choice(lista_med_traps))
+
 
 main()
