@@ -1,5 +1,5 @@
 import random as rand
-from Duel import *
+from startDuel import startDuel
 from Hero import *
 from Monster import *
 from Potions import *
@@ -36,7 +36,7 @@ def main():
                     "Vill du öppna kistan? [ja] [nej]")
                 if val == "ja":
                     hero.inventory.append(rand.choice(lista_med_items))
-                    print("Du hittade en", hero.inventory[0])
+                    print("Du hittade en", hero.inventory[-1])
                 elif val == "nej":
                     print("Du fortsätter vidare som en idiot utan items")
 
@@ -44,9 +44,17 @@ def main():
 
             elif slumptal == 2:
                 print("Du måste möta ett monster, monstret är: ")
-                print(rand.choice(lista_med_monster))
-                #print("Du har {stats}")
-                #input("Vill du engage combat [k] eller försöka springa ifrån [s] ")
+                monster = rand.choice(lista_med_monster)
+                print(monster)
+                print("Det här är dina stats: ")
+                print(hero)
+                
+                val = input("Vill du engage combat [k] eller försöka springa ifrån [s] ")
+                
+                if val == "k":
+                    (hero, monster) = startDuel(hero, monster)
+                elif val =="s" :
+                    print("Du gick därifrån")
                 #print("Du tog {dmg} skada men fortsätter vidare...")
             else:
                 print("Atans du gick in i en fälla")

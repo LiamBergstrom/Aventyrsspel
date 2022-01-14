@@ -9,7 +9,7 @@ class Items ():
 Yxa = Items("Yxa",7 )
 Svärd = Items("Svärd", 5)
 Pilbåge = Items("Pilbåge", 4)
-Stick = Items("stick", 1)
+Stick = Items("Stick", 1)
 Torch = Items("Torch", 2)
 
 
