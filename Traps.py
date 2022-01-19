@@ -26,10 +26,10 @@ class Traps():
 
 
 Sätt_dig_ner = Traps(
-    "Sätt dig ner", "Du möts av ett mörkt rum vad vill du göra? Fortsätta och gå in i rummet eller gå där ifrån", 100, "Damage")
-Fontänen = Traps("Fontänen", "Du möts av en fontän, fontänen ser väldigt lovande ut så du tar ett dopp, Plask du blir nerdragen och nästan drunkar men du klarar dig", 4, "Damage")
+    "Sätt dig ner", "Du möts av ett mörkt rum vad vill du göra? Fortsätta och gå in i rummet eller gå där ifrån", 100, "100 Damage")
+Fontänen = Traps("Fontänen", "Du möts av en fontän, fontänen ser väldigt lovande ut så du tar ett dopp, Plask du blir nerdragen och nästan drunkar men du klarar dig", 4, "4 Damage")
 Snygg_maiden = Traps(
-    "Snygg_maiden", "Du stöter på en snygg maiden. Du säger en dålig pick-up line och på grund av det tar hon fram en Musket och skjuter dig i benet.", 6, "Damage")
+    "Snygg_maiden", "Du stöter på en snygg maiden. Du säger en dålig pick-up line och på grund av det tar hon fram en Musket och skjuter dig i benet.", 6, "6 Damage")
 
 
 lista_med_traps = [Sätt_dig_ner, Fontänen, Snygg_maiden]
